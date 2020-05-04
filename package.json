@@ -31,10 +31,8 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "node app.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm run build",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint ."
