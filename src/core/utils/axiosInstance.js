@@ -11,7 +11,9 @@ export const formatError = (error) => {
   return Promise.reject({ data, status });
 };
 export const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:3000',
+  baseURL:
+    process.env.REACT_APP_API_URL ||
+    'https://desolate-atoll-28732.herokuapp.com',
 });
 
 /* axiosInstance.interceptors.request.use((config) => {
