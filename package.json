@@ -15,6 +15,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
+    "express": "^4.17.1",
     "jest-environment-jsdom": "^25.4.0",
     "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",
