@@ -32,7 +32,7 @@ const Menu = ({ getProducts, products, success, clearNotification }) => {
             <ProductItem
               idProduct={item.idProduct}
               name={item.name}
-              img="/images/pizza.png"
+              img="/images/pizza.PNG"
               alt="pizza"
               priceDol={item.priceDol}
               priceEur={item.priceEur}
