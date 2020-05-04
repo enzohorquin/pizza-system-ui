@@ -9,6 +9,7 @@ import {
   setCartSuccess,
   deleteFromCartSuccess,
   addToCartSuccess,
+  setNotification,
 } from '../actions';
 import {
   getProductsFromCart,
@@ -52,6 +53,7 @@ function* initiateAddToCart(action) {
       priceDol,
     };
     yield put(addToCartSuccess(item));
+    yield put(setNotification());
   } catch (errors) {
     yield put({ type: SET_ERRORS, payload: errors.data });
   }

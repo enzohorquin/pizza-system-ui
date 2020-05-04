@@ -3,6 +3,7 @@
 @import './styles/globals/colors';
 @import './styles/globals/font-styles';
 @import './styles/components/ProductItem/styles.scss';
+@import './styles/components/HistoryItem/styles.scss';
 @import './styles/components/Footer/styles.scss';
 @import './styles/components/Nav/styles.scss';
 @import './styles/components/Counter/styles.scss';
@@ -22,8 +23,13 @@ html, body {
     width: 690px;
     margin: 100px auto 0 auto;
     background-color: #DDDDDD;
-    border: 1px solid transparent;
     border-radius: 8px;
+}
+.history{
+  width: 420px;
+  margin: 100px auto 0 auto;
+  background-color: rgb(219, 219, 219);
+  border-radius: 8px;
 }
 .menu:first-child{
     border: none;

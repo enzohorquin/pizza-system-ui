@@ -11,6 +11,7 @@ function* initiateGetProducts() {
     const response = yield call(getProducts, categoryPizza);
     yield put(setProducts(response.data));
   } catch (errors) {
+    debugger;
     yield put({ type: SET_ERRORS, payload: errors.data });
   }
 }

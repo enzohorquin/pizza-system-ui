@@ -1,0 +1,31 @@
+.history-item{
+    color: black;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    padding-left: 10px;
+    padding: 6px;
+    overflow: hidden;
+    margin: 0 0 9px;
+    border-radius: 6px 6px;
+    width: 100%;
+    &__name{
+        margin-top: 26px;
+        background: #ffffff;
+        font-weight: bold;
+        background: #ffffff;
+        font-size: 17px;
+        padding: 10px 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: block;
+        width: 350px;
+        
+    }
+    &__quantity{
+        padding: 10px 10px 0 0px;
+        margin-left: 6px;
+    }
+    &_date{
+
+    }
+}

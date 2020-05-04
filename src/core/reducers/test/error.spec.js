@@ -7,14 +7,14 @@ describe('error reducer', () => {
       type: SET_ERRORS,
       payload: {
         errors: {
-          message: 'You have an error',
+          message: 'Ooops, something went wrong',
         },
       },
     };
     const newState = errorReducer(undefined, action);
     expect(newState).toEqual({
       errors: {
-        message: 'You have an error',
+        message: 'Ooops, something went wrong',
       },
     });
   });

@@ -1,13 +1,31 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ProductItem from '../../components/ProductItem';
+import { notificationSuccess } from '../../core/utils/Notifications';
 
-const Menu = ({ getProducts, products }) => {
+const Menu = ({ getProducts, products, success, clearNotification }) => {
   useEffect(() => {
     getProducts();
   }, [getProducts]);
+
+  const notificationInfo = {
+    title: 'Item Added to cart',
+    message: '',
+  };
+  const notification = success
+    ? notificationSuccess(
+        notificationInfo,
+        () => {
+          clearNotification();
+        },
+        () => {
+          clearNotification();
+        }
+      )
+    : null;
   return (
-    <div className="menu container ">
+    <div className="menu">
+      {notification}
       <ul>
         {products.map((item) => (
           <li key={item.idProduct}>
@@ -35,5 +53,7 @@ Menu.propTypes = {
     })
   ).isRequired,
   getProducts: PropTypes.func.isRequired,
+  success: PropTypes.bool.isRequired,
+  clearNotification: PropTypes.func.isRequired,
 };
 export default Menu;

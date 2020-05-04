@@ -18,6 +18,9 @@ import {
   CREATE_ORDER_REQUEST,
   CREATE_ORDER_SUCCESS,
   SET_ERRORS,
+  CLEAR_ERRORS,
+  CLEAR_NOTIFICATION,
+  SET_NOTIFICATION,
 } from './types';
 
 // Products Action Creators
@@ -75,4 +78,16 @@ export const createOrderSuccess = () => ({
 export const setError = (payload) => ({
   type: SET_ERRORS,
   payload,
+});
+
+export const clearError = () => ({
+  type: CLEAR_ERRORS,
+});
+
+export const clearNotification = () => ({
+  type: CLEAR_NOTIFICATION,
+});
+
+export const setNotification = () => ({
+  type: SET_NOTIFICATION,
 });

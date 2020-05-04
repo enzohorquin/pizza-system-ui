@@ -8,6 +8,7 @@ import {
   setOrderHistory,
   createOrderSuccess,
   clearCartSuccess,
+  setNotification,
 } from '../actions';
 import { getOrders, createOrder, clearCart } from '../services/api';
 
@@ -29,6 +30,7 @@ function* initiateCreateOrder(action) {
     yield call(clearCart);
     yield put(createOrderSuccess());
     yield put(clearCartSuccess());
+    yield put(setNotification());
   } catch (errors) {
     yield put({ type: SET_ERRORS, payload: errors.data });
   }

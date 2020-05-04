@@ -1,9 +1,6 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 import ReduxToastr from 'react-redux-toastr';
-import Menu from './screens/Menu';
-import Cart from './screens/Cart';
-import OrderHistory from './screens/OrderHistory';
+import Main from './screens/Main';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import './app.scss';
@@ -14,11 +11,7 @@ function App() {
     <>
       <Nav />
       <ReduxToastr preventDuplicates position="bottom-left" />
-      <Switch>
-        <Route exact path="/" component={Menu} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/order-history" component={OrderHistory} />
-      </Switch>
+      <Main />
       <Footer />
     </>
   );

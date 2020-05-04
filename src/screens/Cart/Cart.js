@@ -5,8 +5,15 @@ import IconButton from '@material-ui/core/IconButton';
 import ProductItem from '../../components/ProductItem';
 import { calculatePrice } from '../../core/utils/utils';
 import Modal from '../../components/Modal/Modal';
+import { notificationSuccess } from '../../core/utils/Notifications';
 
-const Cart = ({ cart, getCart, deleteFromCart }) => {
+const Cart = ({
+  cart,
+  getCart,
+  deleteFromCart,
+  success,
+  clearNotification,
+}) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -17,15 +24,35 @@ const Cart = ({ cart, getCart, deleteFromCart }) => {
   useEffect(() => {
     getCart();
   }, [getCart]);
+
+  const notificationInfo = {
+    title: 'Order Created!',
+    message: 'Your order should be arriving soon!',
+  };
+  const notification = success
+    ? notificationSuccess(
+        notificationInfo,
+        () => {
+          clearNotification();
+        },
+        () => {
+          clearNotification();
+        }
+      )
+    : null;
+
   const totalDol = calculatePrice(cart, 'priceDol');
   const totalEur = calculatePrice(cart, 'priceEur');
+
   const handleDelete = (idProduct) => {
     deleteFromCart({ idProduct });
   };
+
   const cartList =
     cart.length > 0 ? (
       <>
         <div className="menu">
+          {notification}
           <ul>
             {cart.map((item) => {
               return (
@@ -86,6 +113,8 @@ Cart.propTypes = {
     })
   ).isRequired,
   getCart: PropTypes.func.isRequired,
+  success: PropTypes.bool.isRequired,
+  clearNotification: PropTypes.func.isRequired,
 };
 
 export default Cart;
