@@ -1,0 +1,87 @@
+@import './styles/index.scss';
+@import './styles/resets';
+@import './styles/globals/colors';
+@import './styles/globals/font-styles';
+@import './styles/components/ProductItem/styles.scss';
+@import './styles/components/Footer/styles.scss';
+@import './styles/components/Nav/styles.scss';
+@import './styles/components/Counter/styles.scss';
+
+#root{
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 12rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.menu{
+    width: 690px;
+    margin: 100px auto 0 auto;
+    background-color: #DDDDDD;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+.menu:first-child{
+    border: none;
+}
+
+.no-items{ 
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.amount-total{
+    display: block;
+    overflow: visible;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+    &__text{
+      line-height: 29px;
+      padding-left: 10px;
+    }
+    &__price{
+      float: right;
+      padding: 5px 10px 6px 12px;
+      border-radius: 3px;
+      position: relative;
+    }
+    &__final-price{
+      margin-left: 4px;
+    }
+}
+
+.buy-button{
+  float: right;
+  margin-top: 5px;
+  height: 45px;
+  width: 100px;
+  color: white;
+  font-weight: bold;
+  background-color: $tomato;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 2px solid $tomato;
+  cursor: pointer;
+}
+.buy-button:hover{
+  background-color: hsl(9, 100%, 70%);
+  border: 2px solid hsl(9, 100%, 70%);
+}
+
+.buy-button:disabled {
+  background-color: hsl(9, 100%, 70%);
+  border: 2px solid hsl(9, 100%, 70%);
+  cursor: default;
+}
+
+.cart-item{
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff ;
+}

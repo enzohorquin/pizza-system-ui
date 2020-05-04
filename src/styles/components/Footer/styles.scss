@@ -1,0 +1,61 @@
+
+.footer {
+        background: $tomato;
+        bottom: 0;
+        width: 100%;
+        height: 7rem;
+        position: absolute;
+
+    &__icons {
+        color: #fff;
+        :visited {
+            color: #fff;
+        }
+        text-align: center;
+        padding: 25px 0;
+        &__icon {
+            margin: 0 10px;
+            font-size: 1.15em;
+            color: #fff;
+            :visited {
+                color: #fff;
+            }
+        }
+    }
+    &__list {
+        color: #fff;
+        :visited {
+            color: #fff;
+        }
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        &__item {
+            margin: 0 10px;
+            text-decoration: none;
+            &__link {
+                text-decoration: none;
+                color: white;
+                :visited {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer {
+        width:100%;
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            &__item {
+                margin: 10px 0;
+            }
+            &__pipe {
+                display: none;
+            }
+        }
+    }
+}
