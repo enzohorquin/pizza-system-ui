@@ -30,7 +30,7 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "dev": "set PORT=3001 && react-scripts start",
+    "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
