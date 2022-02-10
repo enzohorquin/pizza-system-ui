@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "jest-environment-jsdom": "^25.4.0",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
